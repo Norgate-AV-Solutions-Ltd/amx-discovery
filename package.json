@@ -1,0 +1,14 @@
+{
+    "name": "amx-discovery",
+    "version": "1.0.0",
+    "main": "./build/main.js",
+    "author": "Norgate AV Solutions Ltd",
+    "license": "MIT",
+    "scripts": {
+        "build": "tsc"
+    },
+    "devDependencies": {
+        "@types/node": "^20.4.5",
+        "typescript": "^5.1.6"
+    }
+}
