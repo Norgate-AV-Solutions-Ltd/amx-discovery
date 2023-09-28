@@ -1,26 +1,40 @@
 {
     "name": "amx-discovery",
     "description": "A CLI tool for discovering AMX devices on the network",
-    "version": "1.0.0",
-    "main": "./build/main.js",
-    "author": "Norgate AV Solutions Ltd",
+    "version": "0.0.1",
+    "main": "dist/bin.js",
+    "author": "Norgate AV",
     "license": "MIT",
     "bin": {
-        "amx-discovery": "./build/main.js"
+        "amx-discovery": "./dist/bin.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Norgate-AV/amx-discovery.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Norgate-AV/amx-discovery/issues"
     },
     "scripts": {
-        "clean": "rimraf ./build",
-        "prebuild": "yarn clean",
-        "build": "tsc"
+        "build": "tsup",
+        "lint": "tsc",
+        "prestart": "pnpm build",
+        "start": "node dist/bin.js",
+        "dev": "vitest",
+        "test": "vitest run"
     },
     "devDependencies": {
+        "@commander-js/extra-typings": "^11.0.0",
         "@types/node": "^20.4.5",
-        "rimraf": "^5.0.1",
-        "typescript": "^5.1.6"
+        "terser": "^5.20.0",
+        "tsup": "^7.2.0",
+        "typescript": "^5.1.6",
+        "vitest": "^0.34.1"
     },
     "dependencies": {
-        "@commander-js/extra-typings": "^11.0.0",
         "commander": "^11.0.0",
-        "node-jq": "^3.0.0"
+        "node-jq": "^4.0.1",
+        "string-builder": "^0.1.8",
+        "table": "^6.8.1"
     }
 }

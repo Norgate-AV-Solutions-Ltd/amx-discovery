@@ -1,7 +1,7 @@
 import dgram, { RemoteInfo } from "dgram";
-import { Device } from "../../lib/types";
-import { Packet } from "../../lib/Packet";
-import { getChecksum } from "../../lib/utils";
+import { Device } from "../lib/types";
+import { Packet } from "../lib/Packet";
+import { getChecksum } from "../lib/utils";
 
 const ICSP_PORT = 1319;
 
